@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yPrBgujlKtxQU/a+P7gc59g8X1ru+TTfGx9JnfPjNiM=",
+  "Source": "atc-backend-app",
+  "BasePath": "_content/atc-backend-app",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
