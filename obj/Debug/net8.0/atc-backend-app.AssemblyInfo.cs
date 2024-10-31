@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("atc-backend-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87d0a6618cf2130920839d542d986615bc4a180f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2ad44fbd3f38fabaa1cf2bcda30a4770b36fa2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("atc-backend-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("atc-backend-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
