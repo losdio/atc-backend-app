@@ -13,12 +13,11 @@ namespace atc_backend_app.Controllers
         private readonly IConfiguration _configuration = configuration;
 
         [HttpPost]
-        [Route("registration")]
-        public string Registration(Registration registration)
+        [Route("register")]
+        public string Registration(User user)
         {
-
             SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("UserRegistration").ToString());
-            SqlCommand cmd = new SqlCommand("INSERT INTO UserManagement(Username, Name, Email, Password) VALUES('" + registration.Username + "','" + registration.Name + "','" + registration.Email + "','" + registration.Password + "')", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Users(Username, Email, PasswordHash) VALUES('" + user.Username + "','" /*+ user.Name + "','"*/ + user.Email + "','" + user.Password + "')", conn);
             conn.Open();
             int i = cmd.ExecuteNonQuery();
             conn.Close();
@@ -31,6 +30,6 @@ namespace atc_backend_app.Controllers
                 return "";
             }
         }
-        
+
     }
 }

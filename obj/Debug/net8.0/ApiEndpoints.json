@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "atc_backend_app.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "u",
+        "Type": "atc_backend_app.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "atc_backend_app.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "atc_backend_app.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "atc_backend_app.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/login",
@@ -8,8 +40,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
-        "Type": "atc_backend_app.Models.Login",
+        "Name": "user",
+        "Type": "atc_backend_app.Models.User",
         "IsRequired": true
       }
     ],
@@ -28,14 +60,14 @@
   {
     "ContainingType": "atc_backend_app.Controllers.RegistrationController",
     "Method": "Registration",
-    "RelativePath": "api/Registration/registration",
+    "RelativePath": "api/Registration/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "registration",
-        "Type": "atc_backend_app.Models.Registration",
+        "Name": "user",
+        "Type": "atc_backend_app.Models.User",
         "IsRequired": true
       }
     ],
@@ -46,6 +78,48 @@
           "text/plain",
           "application/json",
           "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
+    "RelativePath": "authenticate",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "atc_backend_app.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_5",
+    "RelativePath": "signin",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain"
         ],
         "StatusCode": 200
       }

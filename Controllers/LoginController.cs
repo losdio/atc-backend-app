@@ -15,10 +15,10 @@ namespace atc_backend_app.Controllers
 
         [HttpPost]
         [Route("login")]
-        public string Login(Login login)
+        public string Login(User user)
         {
             SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("UserRegistration").ToString());
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM UserManagement WHERE Username = '" + login.Username + "' AND Password = '" + login.Password + "'", conn);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Users WHERE Username = '" + user.Username + "' AND Password = '" + user.Password + "'", conn);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
             if (dt.Rows.Count > 0)
