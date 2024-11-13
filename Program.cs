@@ -10,6 +10,7 @@ using atc_backend_app.Services;
 using Microsoft.OpenApi.Models;
 using atc_backend_app.Models;
 using atc_backend_app.Helpers;
+using atc_backend_app.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -75,7 +76,8 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
-//builder.Services.AddDbContext<ApplicationDbContext>();
+builder.Services.AddDbContext<ApplicationDbContext>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
@@ -86,6 +88,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "atc-backend-app API V1"));
 }
+
 
 app.MapPost("/authenticate", (User user, TokenService tokenService)
     => tokenService.GenerateToken(user));
